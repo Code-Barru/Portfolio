@@ -17,7 +17,7 @@
 					color="indigo darken-3"
 				>
 					<v-img
-					:lazy-src="project.img"
+					:src="project.img"
 					class="white--text align-end"
 					height="200px"
 					> 
@@ -82,22 +82,13 @@ export default {
 					case 'md': return '4'
 					case 'lg': return '4'
 					case 'xl': return '4'
-					default: return '800px'
+					default: return '4'
 			}
 		}
 	},
 
 	data: () => ({
 		projects: [
-			{
-				name: 'Code-Bot',
-				langage: 'NodeJS/DiscordJS',
-				description: 'Bot Discord pouvant tracker ',
-				year: '2022',
-				show: false,
-				img: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
-				git: 'https://github.com/Code-Barru/Code-Bot'
-			},
 			{
 				name: 'Labyrinthe',
 				langage: 'C++/SFML',
@@ -108,13 +99,22 @@ export default {
 				git: 'https://github.com/Code-Barru/labyrinthe'
 			},
 			{
+				name: 'Code-Bot',
+				langage: 'NodeJS/DiscordJS',
+				description: 'Bot Discord pouvant tracker ',
+				year: '2022',
+				show: false,
+				img: 'https://repository-images.githubusercontent.com/456235784/49d00860-869e-4288-a9ed-09473acce78c?width=1034&height=517',
+				git: 'https://github.com/Code-Barru/Code-Bot'
+			},
+			{
 				name: 'Site Portfolio',
 				langage: 'VueJS, Vuetify',
 				description: 'test',
 				year: '2022',
 				show: false,
-				img: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
-				git: 'https://github.com/Code-Barru'
+				img: 'https://repository-images.githubusercontent.com/471491911/8ec843c5-389f-4078-a9b4-60673a84cf92',
+				git: 'https://github.com/Code-Barru/Portfolio'
 			},
 		]
 	}),

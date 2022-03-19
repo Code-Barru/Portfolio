@@ -16,7 +16,7 @@
 					color="secondary"
 				>
 					<h2 class="name">Antoine<strong> OUSSELIN</strong></h2>
-					<h4>Étudiant en Informatique </h4>
+					<!-- <h4>Étudiant en Informatique </h4> -->
 				</v-col>
 			</v-row>
 		</v-parallax>
