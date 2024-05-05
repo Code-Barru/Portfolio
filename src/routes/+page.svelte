@@ -1,6 +1,9 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
 	import * as config from '$lib/config';
+
+	import Post from '../components/post.svelte';
+	import LatestPost from '../components/latestPost.svelte';
+	
 	export let data;
 </script>
 
@@ -9,13 +12,12 @@
 </svelte:head>
 
 <section>
+	<LatestPost post={data.latestPost} />
+	<h3>Other Projects</h3>
 	<ul class="posts">
+		
 		{#each data.posts as post}
-			<li class="post">
-				<a href={'post/' + post.slug} class="title">{post.title}</a>
-				<p class="date">{formatDate(post.date, 'medium')}</p>
-				<p class="description">{post.description}</p>
-			</li>
+			<Post post={post} />
 		{/each}
 	</ul>
 </section>
@@ -23,29 +25,9 @@
 <style>
 	.posts {
 		display: grid;
-		gap: 2rem;
+		gap: var(--spacing-24);
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		margin-top: var(--spacing-32);
 	}
 
-	.post {
-		max-inline-size: var(--size-content-3);
-	}
-
-	.post:not(:last-child) {
-		border-bottom: 1px solid var(--border);
-		padding-bottom: var(--size-7);
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
-	}
-
-	.date {
-		color: var(--text-2);
-		text-transform: capitalize;
-	}
-
-	.description {
-		margin-top: var(--size-3);
-	}
 </style>

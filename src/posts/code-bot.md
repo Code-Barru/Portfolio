@@ -1,10 +1,10 @@
 ---
-title: First post
-description: First post
-date: '2024-3-2'
+title: Code-Bot
+description: Discord bot to track LeagueOfLegends games.
+date: '2024-3-5'
 categories:
-  - svelte
-  - svelteKit
+  - bot
+  - discord
 published: true
 ---
 
